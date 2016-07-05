@@ -2,12 +2,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.meizu.supporttestclilent">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"></uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        //主Activity
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -15,6 +21,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        //接收wifi切换广播
+        <receiver android:name=".broadcast.wifiSwitchReceiver">
+            <intent-filter>
+                <action android:name="com.SupportTestClilent.broadcast.SWITCH_WIFI"></action>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".AlarmReceiver"></receiver>
+        <service android:name=".LongRunService"></service>
+        <service android:name=".MyService">
+        </service>
+
     </application>
 
 </manifest>

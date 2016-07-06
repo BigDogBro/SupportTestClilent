@@ -13,36 +13,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
-
-    <Button
-        android:id="@+id/button"
-        android:text="send"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <Button
-        android:id="@+id/start_service"
-        android:text="start"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <Button
-        android:id="@+id/stop_service"
-        android:text="stop"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <Button
-        android:id="@+id/bind_service"
-        android:text="bind"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <Button
-        android:id="@+id/unbind_service"
-        android:text="unbind"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:text="SupportTestClient." />
 
 </LinearLayout>
